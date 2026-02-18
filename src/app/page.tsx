@@ -1,5 +1,3 @@
-// src/app/page.tsx
-import { Navbar } from '@/components/layout/navbar';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Check } from 'lucide-react';
@@ -14,12 +12,12 @@ export default function Home() {
   ];
 
   return (
-    <div className="flex min-h-screen flex-col">
-      <Navbar />
+    // Navbar kalktı, layout.tsx içindeki Header bu sayfanın üstünde otomatik görünecek.
+    <div className="flex flex-col"> 
       
       {/* Hero Section */}
       <section className="space-y-6 pb-8 pt-6 md:pb-12 md:pt-10 lg:py-32">
-        <div className="container flex max-w-[64rem] flex-col items-center gap-4 text-center">
+        <div className="container flex max-w-[64rem] flex-col items-center gap-4 text-center mx-auto px-4">
           <h1 className="font-heading text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold">
             İşinizi Yönetmenin <br className="hidden sm:inline" />
             <span className="text-primary">En Profesyonel Yolu</span>
@@ -29,10 +27,11 @@ export default function Home() {
             SaaS deneyiminizi bir üst seviyeye taşıyın.
           </p>
           <div className="space-x-4">
-            <Link href="/register">
+            {/* Linkler /auth/ dizinine yönlendirildi */}
+            <Link href="/auth/register">
               <Button size="lg">Hemen Başla</Button>
             </Link>
-            <Link href="/login">
+            <Link href="/auth/login">
               <Button size="lg" variant="outline">Giriş Yap</Button>
             </Link>
           </div>
@@ -40,7 +39,7 @@ export default function Home() {
       </section>
 
       {/* Pricing Section */}
-      <section className="container py-8 md:py-12 lg:py-24 bg-slate-50 dark:bg-slate-900/50 rounded-3xl">
+      <section className="container mx-auto py-8 md:py-12 lg:py-24 bg-slate-50 dark:bg-slate-900/50 rounded-3xl mb-8 px-4">
         <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center mb-10">
           <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl font-bold">
             Planlar
@@ -50,7 +49,7 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-3 max-w-5xl mx-auto">
           {plans.map((plan) => (
             <Card key={plan.name} className="flex flex-col">
               <CardHeader>
@@ -68,7 +67,8 @@ export default function Home() {
                 </ul>
               </CardContent>
               <CardFooter>
-                <Link href="/register" className="w-full">
+                {/* Buradaki link de /auth/register olarak güncellendi */}
+                <Link href="/auth/register" className="w-full">
                   <Button className="w-full">Seç</Button>
                 </Link>
               </CardFooter>
