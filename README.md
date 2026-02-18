@@ -104,8 +104,9 @@ npm run start
 
 ## 🤝 Contact & Feedback
 
-> If you encounter any issues running the project, have suggestions for refactoring, or want to contribute to this open-source initiative:
-> 
-> 📧 **Email:** [onuraba34@gmail.com](mailto:onuraba34@gmail.com)
-> 
-> Developed by Onur Aba.
+If you encounter any issues running the project, have suggestions for refactoring, or want to contribute to this open-source initiative:
+
+📧 **Email:** [onuraba34@gmail.com](mailto:onuraba34@gmail.com)
+
+---
+*Developed by Onur Aba.*
